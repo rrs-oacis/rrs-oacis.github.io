@@ -1,8 +1,0 @@
-{
-  "appendix-h1": "Appendix",
-  "appendix-app-h2": "App",
-  "appendix-app-p-1": "RRS-OACIS has a mechanism called \"App\" that extends the function of RRS-OACIS.",
-  "appendix-app-p-2": "\"Run\" for simulation and \"Competition\" used in the convention are also implemented as App. By creating and introducing your own \"App\", you can use it according to the purpose of research.",
-  "appendix-app-create-h3": "Create an App",
-  "appendix-app-create-p-1": "Please refer to Readme.md below this <a href=\"https://github.com/tkmnet/run_manager\" target=\"_blank\">repository</a>."
-}

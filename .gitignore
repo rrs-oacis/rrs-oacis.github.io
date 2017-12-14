@@ -1,3 +1,8 @@
 node_modules/
 
 .idea/
+
+app.js
+create-localize.js
+localize.sh
+package.json

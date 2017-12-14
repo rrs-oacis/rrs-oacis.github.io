@@ -1,0 +1,2 @@
+var sICreateHttpRequest=function(){if(window.ActiveXObject){try{return new ActiveXObject("Msxml2.XMLHTTP");}catch(e){try{return new ActiveXObject("Microsoft.XMLHTTP");}catch(e2){return null;}}}else if(window.XMLHttpRequest){return new XMLHttpRequest();}else{return null;}}
+var simpleimport=function(target,file,afterfunc){var httpoj=sICreateHttpRequest();httpoj.open("GET",file,"true");httpoj.onreadystatechange=function(){if(httpoj.readyState==4){document.getElementById(target).innerHTML=httpoj.responseText;if(afterfunc!=undefined){afterfunc();}}};httpoj.send("");}

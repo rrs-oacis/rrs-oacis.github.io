@@ -1,0 +1,267 @@
+p {
+    text-indent:1em;
+}
+
+#pageContents{
+    margin-bottom: 40px;
+}
+
+/**
+h2 {
+    border-top:solid 3px powderblue;
+    margin-top:1em;
+    padding-top:2px;
+    color:#008cba;
+}
+
+h3 {
+    border-top:dashed 2px powderblue;
+    margin-top:1em;
+    padding-top:2px;
+    color:#008cba;
+}
+
+h4 {
+    padding-top:2px;
+    color:#008cba;
+}
+h4:before {
+    content:"−";
+    margin-right:0.5em;
+    color:#008cba;
+}*/
+
+img {
+    display:block;
+    max-width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    cursor: zoom-in;
+}
+
+.lity-content img{
+    cursor: default;
+}
+
+h1.title {
+    font-size:2.4em;
+    margin-bottom:0.5em;
+}
+
+pre.term {
+	border: solid 2px silver;
+	border-top: solid 10px silver;
+	background-color: black;
+	color: white;
+	font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+pre.term-mac:before {
+    content: "term";
+    color: #555;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #c2c0c2;
+    background-color: #e8e6e8;
+    background-image: linear-gradient(to bottom,#e8e6e8 0,#d1cfd1 100%);
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 22px;
+    height: 22px;
+
+
+}
+
+pre.term-mac{
+    background-color: black;
+    color: white;
+    padding-top: 40px;
+    position: relative;
+
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    border: 1px solid #bebebe;
+    border-radius: 6px;
+    margin: 0 8px 12px 8px;
+}
+
+pre.term1 {
+	border: solid 2px cornflowerblue;
+	border-top: solid 10px cornflowerblue;
+}
+
+pre.term2 {
+	border: solid 2px rosybrown;
+	border-top: solid 10px rosybrown;
+}
+
+li.active {
+    background-color:#008cba;
+    background-color: #15a589 !important;
+}
+
+li.active>a {
+    color:white;
+}
+
+li.active>a:hover {
+    background-color:#008cba;
+    background-color: #15a589 !important;
+}
+
+.syntaxhighlighter .container:before, .syntaxhighlighter .container:after {
+    display: block;
+}
+
+div.syntaxhighlighter .line.alt1{
+    background-color:#fefbfa !important;
+}
+
+div.syntaxhighlighter .line.alt2{
+    background-color:#fefbfa !important;
+}
+
+.slick-slider{
+    margin: 8px 48px;
+}
+
+.slick-arrow:before{
+    color: #3498db !important;
+}
+
+.tocify{
+    background-color: #fffafa;
+}
+
+.tocify-subheader li {
+    font-size: 14px;
+}
+
+hr {
+    border-top: 1px solid #dadfe0;
+}
+
+.hr-success {
+    height: 6px;
+    background-image: -webkit-linear-gradient(left, rgba(21, 165, 137,.8), rgba(15, 157, 88,.6), rgba(0,0,0,0));
+    background-image: -webkit-linear-gradient(left, rgba(243, 156, 18,.8), rgba(243, 156, 18,.6), rgba(0,0,0,0));
+    border: none;
+    margin-left: -8px;
+}
+
+
+#main_nav, #pageContents, .parent{
+    animation: fadeIn 100ms ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.parent{
+    position: relative;
+}
+.inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    padding: 20px;
+}
+
+.inner_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(200%) translateX(-50%);
+    padding: 20px;
+}
+
+.dropdown-menu li a{
+    cursor: pointer;
+}
+
+.panel .label{
+    vertical-align: 0px;
+    margin-left: 3px;
+}
+
+.panel {
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+.number-list{
+    counter-reset: list-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.number-list li {
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+.number-list li:before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    display: block;
+    float: left;
+    color: #222;
+    line-height: 18px;
+    margin-left: -16px;
+    margin-right: 8px;
+    margin-top: 2px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #222;
+}
+
+.tocify-extend-page{
+    display: none;
+}
+
+.file_tree{
+    margin: 0px 8px;
+}
+
+.file_tree ul{
+    border: none;
+    margin: 8px;
+    outline: 0;
+}
+
+.lity.lity-opened{
+    background-color: transparent;
+}
+
+.lity-container{
+    width: 94% !important;
+    height: 94% !important;
+    background-color: white;
+}
+
+.lity-content{
+    position: absolute;
+    height: 100%;
+}
+
+.lity-close{
+    position: absolute;
+    background-color: rgba(256,256,256,0.5);
+}
+
+.lity-content img{
+    height: 100%;
+}
+
+.tocify{
+    max-height: 80% !important;
+}

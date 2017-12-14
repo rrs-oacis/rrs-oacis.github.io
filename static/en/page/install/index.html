@@ -1,0 +1,239 @@
+<h1 class="title" data-localize="install-h1">Installation method</h1>
+
+<h5>Video</h5>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iz4zhfSaBD0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="install-h1-p-1">To use RRS-OACIS</p>
+
+<ol class="number-list">
+    <li data-localize="install-h1-li-1">RRS-OACIS setup</li>
+    <li data-localize="install-h1-li-2">Set up cluster for simulation</li>
+</ol>
+
+<p data-localize="install-h1-p-2">You need to do both</p>
+
+<br>
+
+<p data-localize="install-h1-p-3-1">Recommended environment</p>
+<p data-localize="install-h1-p-3-1-1">As a specification of a personal computer</p>
+<ul>
+    <li data-localize="install-h1-li-1-1">CPU is Intel Core i 7 after 4 th generation</li>
+    <li data-localize="install-h1-li-1-2">Memory is 16 G</li>
+    <li data-localize="install-h1-li-1-3">Wired gigabit ether</li>
+</ul>
+<p data-localize="install-h1-p-3-2">is required</p>
+<p data-localize="install-h1-p-3-3">Number of PCs</p>
+<ul>
+    <li data-localize="install-h1-li-2-1">1 computer <span style="color:red;">(A)</span> <span
+            style="color:blue;">(B)</span></li>
+    <li data-localize="install-h1-li-2-2">Computers to be clustered are multiples of 4 <span
+            style="color:blue;">(B)</span></li>
+</ul>
+<p data-localize="install-h1-p-4">is required</p>
+
+<br>
+
+<p data-localize="install-h1-p-5-1">as the lowest environment</p>
+<p data-localize="install-h1-p-5-1-1">As a specification of a personal computer</p>
+<ul>
+    <li data-localize="install-h1-li-3-1">CPU is Intel Core i7 (3.0 GHz) after 3 rd Generation</li>
+    <li data-localize="install-h1-li-3-2">Memory is 8 G</li>
+    <li data-localize="install-h1-li-3-3">Wired Fast Ether</li>
+</ul>
+<p data-localize="install-h1-p-5-2">is required</p>
+<p data-localize="install-h1-p-5-3">Number of PCs</p>
+<ul>
+    <li data-localize="install-h1-li-2-1">1 computer <span style="color:red;">(A)</span> <span
+            style="color:blue;">(B)</span></li>
+</ul>
+<p data-localize="install-h1-p-6">Operation is possible with </p>
+
+
+<div class="panel panel-info">
+    <span class="label label-warning">Images</span>
+    <div class="panel-body">
+
+        <p data-localize="install-h1-image-p">The physical arrangement of RRS-OACIS and the cluster is like this. (A) is
+            the server that sets up RRS-OAICS and (B) is the server that will become a cluster. Each PC must always be
+            connected.</p>
+        <img src="../image/install/pc.png" data-lity="">
+
+    </div>
+</div>
+
+<br>
+
+<p data-localize="install-h1-p-7">(2) Set up simulation cluster on browser</p>
+<p data-localize="install-h1-p-8">Please do work after RRS-OACIS installation is completed.</p>
+
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="install-h1-tips-1">If you are on the same network, you can operate from
+        another computer with port 3080
+    </div>
+</div>
+
+<hr>
+
+<div name="(1)InstallingRRS-OACIS" data-unique="(1)InstallingRRS-OACIS"></div><h2 data-localize="install-rrsoacis-h2">
+    (1) Installing RRS-OACIS</h2>
+
+<p data-localize="install-rrsoacis-p-1">Using <a href="https://www.docker.com/what-docker" target="_blank "> Docker </a>
+    tool It is easy to introduce the virtual environment where RRS-OACIS is installed.It can be introduced not only to
+    Linux but also Windows, macOS The outline of the procedure is as follows </p>
+<p data-localize="install-rrsoacis-p-2">The OS assumes Ubuntu</p>
+<div name="Requiredenvironment" data-unique="Requiredenvironment"></div><h3 data-localize="install-rrsoacis-me-h3">
+    Required environment</h3>
+<ul>
+    <li data-localize="install-rrsoacis-me-li-1">Docker (checked 17.09.0-ce)</li>
+    <li data-localize="install-rrsoacis-me-li-2">OS where Docker runs</li>
+    <li data-localize="install-rrsoacis-me-li-3">Internet connection</li>
+</ul>
+
+<div name="InstallDocker(Skipthealreadyinstalledone)" data-unique="InstallDocker(Skipthealreadyinstalledone)"></div><h3
+        data-localize="install-rrsoacis-docker-h3">Install Docker (Skip the already installed one)</h3>
+<p data-localize="install-rrsoacis-docker-p-1">Install Docker on Ubuntu, please follow the link below to install it</p>
+<p><a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/" target="_blank"
+      data-localize="install-rrsoacis-docker-p-2">Install Docker on Ubuntu</a></p>
+
+<p data-localize="install-rrsoacis-docker-p-3">* Window is <a href="https://docs.docker.com/docker-for-windows/install/"
+                                                              target="_blank"> From here </a>, Mac users <a
+        href="https://docs.docker.com/docker-for-mac/install/" target="_blank"> here </a> Please install from</p>
+
+<div name="InstallingRRS-OACIS" data-unique="InstallingRRS-OACIS"></div><h3 data-localize="install-rrsoacis-install-h3">
+    Installing RRS-OACIS</h3>
+<p data-localize="install-rrsoacis-install-p-1">You can build an environment where RRS-OACIS was introduced by executing
+    the following script.</p>
+<p data-localize="install-rrsoacis-install-p-2">※ It may take several minutes to build</p>
+<p data-localize="install-rrsoacis-install-p-3">Please execute on PC with Docker installed</p>
+<pre class="term-mac">sudo docker run --name rrsoacis -p 3080:3080 -p 3000:3000 -p 49138:49138/udp -dt rrsoacis/rrsoacis
+</pre>
+
+<p data-localize="install-rrsoacis-install-p-4">Installation is completed if displayed as below</p>
+<pre class="term-mac">Digest: sha256:(※UID)
+Status: Downloaded newer image for rrsoacis/rrsoacis:latest
+</pre>
+
+<p data-localize="install-rrsoacis-install-p-5">in browser access</p>
+<pre> http://localhost:3080/ </pre>
+<p></p>
+<p data-localize="install-rrsoacis-install-p-6">and see if it appears as below.</p>
+<p data-localize="install-rrsoacis-install-p-eImage">(The following image can be magnified)</p>
+
+<img src="../image/default_index.png" data-lity="">
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="install-rrsoacis-install-tips">There is no restriction on the OS to install
+        RRS-OACIS, you can run any OS if Docker is running.
+    </div>
+</div>
+
+<hr>
+
+<div name="(2)Setupthecluster" data-unique="(2)Setupthecluster"></div><h2 id="cluster"
+                                                                          data-localize="install-cluster-h2">(2) Set up
+    the cluster</h2>
+
+<p data-localize="install-cluster-p-1">The OS assumes Ubuntu (I confirmed that it can be executed by the same operation
+    on macOS.)</p>
+<div name="Requiredenvironment5" data-unique="Requiredenvironment5"></div><h3 data-localize="install-cluster-me-h3">
+    Required environment</h3>
+<ul>
+    <li data-localize="install-cluster-me-li-1">Ubuntu 16.04.3 LTS</li>
+    <li data-localize="install-cluster-me-li-2">Oracle JDK (checked 1.8.0_40)</li>
+    <li data-localize="install-cluster-me-li-3">OpenSSH</li>
+    <li data-localize="install-cluster-me-li-4">Ubuntu's local account with password set</li>
+</ul>
+
+<div name="Gotosettingscreen" data-unique="Gotosettingscreen"></div><h3 data-localize="install-cluster-move-h3">Go to
+    setting screen</h3>
+
+<p data-localize="install-cluster-move-p-1">in the browser</p>
+<pre>    http://localhost:3080/settings-clusters
+</pre>
+<p data-localize="install-cluster-move-p-2">accessed</p>
+
+<img src="../image/install/default_cluster.png" data-lity="">
+
+<div name="SetupCluster" data-unique="SetupCluster"></div><h3 data-localize="install-cluster-setting-h3">Set up
+    Cluster</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="setup_host">
+        <div>
+            <h5 data-localize="install-cluster-setting-h5-1">Step 1</h5>
+            <img src="../image/install/cluster_init_01.png" data-lity="">
+            <p data-localize="install-cluster-setting-p-1">Enter the user name and IP address of the PC to be clustered,
+                format is" user name @ IP address". </p>
+        </div>
+        <div>
+            <h5 data-localize="install-cluster-setting-h5-2">Step 2</h5>
+            <img src="../image/install/cluster_init_02.png" data-lity="">
+            <p data-localize="install-cluster-setting-p-2-1">Sets the save format of the simulation log file Select the
+                format supported by the cluster OS, gzip, 7 zip and zip are available There</p>
+            <p data-localize="install-cluster-setting-p-2-2">* Ubuntu is the default gzip format and there is no
+                problem.</p>
+        </div>
+        <div>
+            <h5 data-localize="install-cluster-setting-h5-3">Step 3</h5>
+            <img src="../image/install/cluster_init_03.png" data-lity="">
+            <p data-localize="install-cluster-setting-p-3-1">Enter the cluster password</p>
+            <p data-localize="install-cluster-setting-p-3-2">* Password for Ubuntu's account, assuming the same password
+                for all four.</p>
+        </div>
+        <div>
+            <h5 data-localize="install-cluster-setting-h5-4">Step 4</h5>
+            <img src="../image/install/cluster_init_04.png" data-lity="">
+            <p data-localize="install-cluster-setting-p-4">Add by pressing the Add button.</p>
+        </div>
+        <div>
+            <h5 data-localize="install-cluster-setting-h5-5">Step 5</h5>
+            <img src="../image/install/cluster_init_success.png" data-lity="">
+            <p data-localize="install-cluster-setting-p-5">Setting is completed when displayed as above.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="install-cluster-tips">It is possible to build with only 1 to 3 clusters,
+        there is no need to prepare 4 clusters.
+    </div>
+</div>
+
+<div class="pull-right">
+    <a class="btn btn-default btn btn-info" href="?" data-localize="install-btn-prev">Prev</a>
+    <a class="btn btn-default btn btn-info" href="?page=run" data-localize="install-btn-next">Next</a>
+</div>
+
+
+<script type="text/javascript">
+
+
+    $(function () {
+
+
+        $('.setup_host').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow: $("#prevArrow"),
+            nextArrow: $("#nextArrow")
+
+        });
+
+    });
+
+
+</script>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-localize="title">RRS-OACIS Docs (Ja)</title>
+
+        <link href="../resource/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="../resource/css/jquery.tocify.css" rel="stylesheet">
+        <link href="../resource/css/lity.min.css" rel="stylesheet">
+        <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../resource/css/slick.css" rel="stylesheet">
+        <link href="../resource/css/slick-theme.css" rel="stylesheet">
+        <link href="../resource/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../resource/css/ui.fancytree.min.css" rel="stylesheet">
+        <link href="../resource/css/custom.css" rel="stylesheet">
+
+
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="../resource/sh/shCore.js"></script>
+        <script type="text/javascript" src="../resource/sh/shBrushBash.js"></script>
+        <script type="text/javascript" src="../resource/sh/shBrushJava.js"></script>
+        <script type="text/javascript" src="../resource/sh/shBrushPlain.js"></script>
+        <link href="../resource/sh/shCoreDefault.css" rel="stylesheet">
+        <link href="../resource/sh/shThemeDefault.css" rel="stylesheet">
+        <link href="static/resource/sh/withBootstrap.css" rel="stylesheet">
+    </head>
+
+    <body >
+        <div id="loading_page" style="">
+            <div class="navbar navbar-default">
+
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="?">RRS-OACIS Docs</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a target="_blank" href="https://github.com/rrs-oacis/rrs-oacis">View on Github</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="loading_icon" class="parent"style="display: none;">
+                <div class="inner">
+                    <i class="fa fa-refresh fa-spin fa-4x"></i>
+                </div>
+                <div class="inner_text">Loading page...</div>
+            </div>
+
+        </div>
+        <div id="main_content" style="display: none;margin: 0;padding: 0;">
+        <header class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="?" data-localize="title">RRS-OACIS Docs (ja)</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                </div>
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 hidden-xs">
+                    <div id="toc"></div>
+                </div>
+                <div id="pageContents" class="col-sm-9">
+                </div>
+            </div>
+        </main>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../resource/js/jquery.min.js"></script>
+        <script src="../resource/js/jquery-ui.min.js"></script>
+        <script src="../resource/js/jquery.tocify.min.js"></script>
+        <script src="../resource/js/bootstrap.min.js"></script>
+        <script src="../resource/js/lity.min.js"></script>
+        <script src="../resource/js/slick.min.js"></script>
+        <script src="../resource/js/jquery.localize.js"></script>
+        <script src="../resource/js/jquery.fancytree-all-deps.min.js"></script>
+        <script src="../resource/js/simpleimport.js"></script>
+        <script src="../resource/js/custom.js"></script>
+        <script type="text/javascript">
+
+            var getUrlVars = function(){
+                var vars = {};
+                var param = location.search.substring(1).split('&');
+                for(var i = 0; i < param.length; i++) {
+                    var keySearch = param[i].search(/=/);
+                    var key = '';
+                    if(keySearch != -1) key = param[i].slice(0, keySearch);
+                    var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+                    if(key != '') vars[key] = decodeURI(val);
+                }
+                return vars;
+            }
+
+            var getLang = function(){
+
+                var lnag = "ja";
+
+                if(getUrlVars()["lang"]){
+                    lnag = getUrlVars()["lang"];
+
+                    lnag = lnag.replace("/","");
+                }
+
+                return lnag;
+
+            }
+
+            var changeLang = function () {
+
+                    var lnag = getLang();
+                    var page = "default";
+
+                    if(getUrlVars()["page"]) {
+                        page = getUrlVars()["page"];
+                    }
+
+                    console.log(page);
+
+                    page = page.replace("/index.html","");
+                    page = page.replace("/","-");
+                    page = page.replace(".html","");
+
+                    console.log(page);
+
+                    $("[data-localize]").localize(page,
+                        {
+                            //callback:changeLoading,
+                            pathPrefix: "./resource/lang",
+                            language: lnag,
+                            callback:function(data, defaultCallback){changeLoading();return defaultCallback(data);},
+                            error:function(){changeLoading()}
+                        });
+
+                //changeLoading();
+
+
+            }
+
+            var changeLangNav = function () {
+
+                var lnag = getLang();
+
+                $("[data-localize]").localize("nav",{pathPrefix: "./resource/lang",language: lnag});
+            }
+
+            var changeLangIndex = function () {
+
+                var lnag = getLang();
+
+                $("[data-localize]").localize("index",{pathPrefix: "./resource/lang",language: lnag});
+            }
+
+
+            var initCL = false;
+
+            var changeLoading = function () {
+
+                if(initCL)return;
+                initCL = true;
+
+                setTimeout(function () {
+
+                    $("#loading_page").hide();
+
+                    $("#main_content").show();
+
+
+                    var urlHash = location.hash;
+
+                    if(urlHash) {
+
+                        setTimeout(function (args) {
+
+                            var p = document.querySelector(urlHash).getBoundingClientRect().top;
+                            $('html,body').animate({scrollTop: p-16}, 'slow');
+
+
+                        },500);
+
+
+                    }
+
+                },200);
+
+            }
+            
+            var changeA = function () {
+
+                $(document).on("click", "a", function() {
+
+                    var href = $(this).attr("href");
+                    var download = $(this).attr("download");
+
+                    if(href==null)return true;
+                    if(download!=null)return true;
+                    if(href.indexOf('https://') === 0)return true;
+                    if(href.indexOf('http://') === 0)return true;
+                    if(href.indexOf('#') === 0)return true;
+
+                    if(getUrlVars()["lang"]!=null){
+
+                        hrefs  = href.split("#");
+                        if(hrefs.length>=2){
+                            href = hrefs[0] + "&lang=" + getUrlVars()["lang"] +"#" +  hrefs[1];
+                        }else{
+                            href = href + "&lang=" + getUrlVars()["lang"];
+                        }
+
+
+                    }
+
+                    location.href = href;
+
+                    return false;
+                });
+
+            };
+
+            //changeA();
+
+            var pagesFolderNmae= "page";
+
+            simpleimport("bs-example-navbar-collapse-2","nav.html",function () {/*changeLangNav();*/});
+            simpleimport("pageContents",(getUrlVars()["page"]==null?"./default.html":pagesFolderNmae+"/"+getUrlVars()["page"]),function(){$(function() { changeLang(); setTimeout(function(){ $("#toc").tocify({"selectors":"h2,h3,h4"})},100);});setTimeout("SyntaxHighlighter.highlight();", 500);});
+            setTimeout(function () {
+
+                var targetElem = document.getElementById('pageContents');
+                var scripts = targetElem.getElementsByTagName('script');
+                for (var index in scripts) {
+                    eval(scripts[index].innerText);
+                }
+
+
+                targetElem = document.getElementById('bs-example-navbar-collapse-2');
+                scripts = targetElem.getElementsByTagName('script');
+                for (var index in scripts) {
+                    eval(scripts[index].innerText);
+                }
+
+
+
+
+
+            },500);
+
+            if(location.search.length>3){
+                //history.replaceState('','',location.search.substr(1));
+            }
+
+            //changeLangIndex();
+
+            setTimeout(function(){ $("#loading_icon").show();},500);
+
+
+
+
+        </script>
+        <!-- /Scripts -->
+
+        <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3008/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+        //]]></script>
+
+    </body>
+
+
+
+</html>

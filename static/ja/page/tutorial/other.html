@@ -1,0 +1,131 @@
+<h1 class="title" data-localize="tutorialOther-h1">その他のチュートリアル</h1>
+
+<h2 id="tutorial_other_app_enabled" data-localize="tutorialOther-app-h2">拡張機能を有効化する. </h2>
+
+<p data-localize="tutorialOther-app-p-1">
+    RRS-OACISでは様々な機能がデフォルトでは無効になっています．
+    設定画面から有効化することにより利用することができます．
+</p>
+
+<h3 data-localize="tutorialOther-app-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialOther-app-move-p-1">
+    ブラウザで
+</p>
+<pre>
+http://localhost:3080/settings
+</pre>
+<p data-localize="tutorialOther-app-move-p-2">
+    にアクセスします.
+</p>
+
+<h3 data-localize="tutorialOther-app-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="run_e">
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-1">ステップ1</h5>
+            <img src="../image/run/rune_1.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-1">機能一覧画面に移動するために「Apps」をクリックして移動します</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-2">ステップ2</h5>
+            <img src="../image/run/rune_2.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-2">今回はRunを選択します</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-3">ステップ3</h5>
+            <img src="../image/run/rune_3.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-3">「Enabled」ボタンを押して機能を有効化します.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-4">ステップ4</h5>
+            <img src="../image/run/rune_4.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-4">上のように表示されたら有効化が完了です.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 id="tutorial_other_update" data-localize="tutorialOther-update-h2">RRS-OACISを更新する. </h2>
+<p data-localize="tutorialOther-update-p-1">更新方法を説明します. </p>
+
+<h3 data-localize="tutorialOther-update-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialOther-update-move-p-1">
+    ブラウザで
+</p>
+<pre>
+http://localhost:3080/settings-general
+</pre>
+<p data-localize="tutorialOther-update-move-p-2">
+    にアクセスします.
+</p>
+
+<h3 data-localize="tutorialOther-update-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="update_oacis">
+        <div>
+            <h5 data-localize="tutorialOther-update-op-h5-1">ステップ1</h5>
+            <img src="../image/tutorial/setting/update_01.png" data-lity="">
+            <p data-localize="tutorialOther-update-op-p-1">「Update」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialOther-update-op-h5-2">ステップ2</h5>
+            <img src="../image/tutorial/setting/update_02.png" data-lity="">
+            <p data-localize="tutorialOther-update-op-p-2">上の画像のようにボタンが「Latest version」になっていれば更新成功です.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+
+
+<div class="pull-right">
+    <a class="btn btn-default" href="?page=tutorial" data-localize="tutorialOther-btn-t">チュートリアル一覧へ</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+
+
+
+        $('.update_oacis').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-update"),
+            nextArrow : $("#nextArrow-update")
+
+        });
+
+        $('.run_e').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-run"),
+            nextArrow : $("#nextArrow-run")
+
+        });
+
+
+    });
+
+
+</script>

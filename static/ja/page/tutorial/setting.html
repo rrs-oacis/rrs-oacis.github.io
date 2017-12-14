@@ -1,0 +1,74 @@
+<h1 class="title">設定のチュートリアル</h1>
+
+<p>
+    このパートではRRS-OACISの設定について説明します.
+</p>
+<p>
+    クラスターの設定は <a href="?page=install">インストール</a> を参考にしてください.
+</p>
+
+<hr>
+
+<h2>RRS-OACISを更新する. </h2>
+<p>更新方法を説明します. </p>
+
+<h3>操作画面に移動</h3>
+<p>
+    ブラウザで
+</p>
+<pre>
+http://localhost:3080/settings-general
+</pre>
+<p>
+    にアクセスします.
+</p>
+
+<h3>操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="update_oacis">
+        <div>
+            <h5>ステップ1</h5>
+            <img src="../image/tutorial/setting/update_01.png" data-lity="">
+            <p>「Update」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5>ステップ2</h5>
+            <img src="../image/tutorial/setting/update_02.png" data-lity="">
+            <p>上の画像のようにボタンが「Latest version」になっていれば更新成功です.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+
+
+<div class="pull-right">
+    <a class="btn btn-info" href="?page=tutorial/run.html">前へ</a>
+    <a class="btn btn-default" href="?page=tutorial">チュートリアル一覧へ</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('.update_oacis').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-update"),
+            nextArrow : $("#nextArrow-update")
+
+        });
+
+
+    });
+
+
+</script>

@@ -1,0 +1,602 @@
+<h1 class="title" data-localize="tutorialBasic-h1">Basic tutorial</h1>
+
+    <p data-localize="tutorialBasic-p-1">Please refer to <a href="?page=run"> How to Run </a> for basic usage</p>
+
+    <hr class="hr-success">
+
+    <!-- ▼▼▼▼▼▼ Agent ▼▼▼▼▼▼ -->
+    <div name="UploadtheoriginalAgent" data-unique="UploadtheoriginalAgent"></div><h2 id="tutorial_basic_agent_update" data-localize="tutorialBasic-aUp-h2">Upload the original Agent</h2>
+
+
+    <h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/34v_ZxzDBS4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialBasic-aUp-p-1">Explain how to upload the original Agent to RRS-OACIS</p>
+
+    <div name="Create" data-unique="Create"></div><h3 data-localize="tutorialBasic-aUp-create-h3">Create</h3>
+
+    <p data-localize="tutorialBasic-aUp-create-p-1">For RRS-OACIS, you can use the agent that used <a href="https://rcrs-adf.github.io/ja/#">RoboCupRescue Simulation Agent Development Framework (RCRS-ADF)</a> as a prerequisite. Refer to <a href="https://rcrs-adf.github.io/ja/?sbs/">the tutorial</a> on RCRS-ADF and create Agent.</p>
+
+
+    <div name="Prepared" data-unique="Prepared"></div><h3 data-localize="tutorialBasic-aUp-preparation-h3">Prepared</h3>
+    <p data-localize="tutorialBasic-aUp-preparation-p-1">Once you have created the Agent, prepare an Agent Zip file with the following configuration</p>
+
+    <p data-localize="tutorialBasic-aUp-preparation-p-2">※ Zip file name is optional</p>
+
+    <div id="agent_tree" class="file_tree panel panel-info">
+        <ul id="treeData" style="display: none;">
+            <li class="folder expanded">src
+
+                <ul>
+                    <li>rescue code...</li>
+                </ul>
+            </li>
+            <li class="folder expanded">config
+                <ul>
+                    <li>module.cfg</li>
+                </ul>
+            </li>
+            <li class="folder expanded">data
+                <ul>
+                    <li>develop.json</li>
+                </ul>
+            </li>
+            <li class="folder">library
+                <ul>
+                    <li class="folder">rescue
+                        <ul>
+                            <li class="folder">adf
+                                <ul>
+                                    <li>adf-core.jar</li>
+                                </ul>
+                            </li>
+                            <li class="folder">rescuecore
+                                <ul>
+                                    <li>clear.jar</li>
+                                    <li>collapse.jar</li>
+                                    <li>gis2.jar</li>
+                                    <li>handy.jar</li>
+                                    <li>human.jar</li>
+                                    <li>ignition.jar</li>
+                                    <li>kernel.jar</li>
+                                    <li>maps.jar</li>
+                                    <li>misc.jar</li>
+                                    <li>rescuecore2.jar</li>
+                                    <li>resq-fire.jar</li>
+                                    <li>sample.jar</li>
+                                    <li>standard.jar</li>
+                                    <li>traffic3.jar</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="folder">util
+                        <ul>
+                            <li>commons-math3-3.4.1.jar</li>
+                            <li>guava-20.0.jar</li>
+                            <li>jackson-annotations-2.8.5.jar</li>
+                            <li>jackson-core-2.8.5.jar</li>
+                            <li>jackson-databind-2.8.5.jar</li>
+                            <li>jackson-dataformat-msgpack-0.8.11.jar</li>
+                            <li>jsr305-3.0.1.jar</li>
+                            <li>msgpack-core-0.8.11.jar</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>compile.sh</li>
+            <li>precompute.sh</li>
+            <li>start.sh</li>
+
+        </ul>
+    </div>
+
+    <div name="Upload" data-unique="Upload"></div><h3 data-localize="tutorialBasic-aUp-up-h3">Upload</h3>
+    <p data-localize="tutorialBasic-aUp-up-p-1">Upload Agent data used for simulation to RRS-OACIS.</p>
+
+    <div name="Movetooperationscreen" data-unique="Movetooperationscreen"></div><h4 data-localize="tutorialBasic-aUp-up-move-h4">Move to operation screen</h4>
+
+    <p data-localize="tutorialBasic-aUp-up-move-p-1">Click "Agents" from the sidebar.</p>
+    <p data-localize="tutorialBasic-aUp-up-move-p-eImage">(the following images can be magnified)</p>
+    <img src="../image/run/au.png" data-lity="">
+
+
+    <p data-localize="tutorialBasic-aUp-up-move-p-2">Or, to the browser,</p>
+    <pre>http://localhost:3080/agents
+</pre>
+    <p data-localize="tutorialBasic-aUp-up-move-p-3">to access</p>
+
+    <div name="Operation" data-unique="Operation"></div><h4 data-localize="tutorialBasic-aUp-up-op-h4">Operation</h4>
+
+    <div style="margin-bottom: 16px;">
+        <div class="upload_agent">
+            <div>
+                <h5 data-localize="tutorialBasic-aUp-up-op-h5-1">Step 1</h5>
+                <img src="../image/run/agent_up_1.png" data-lity="">
+                <p data-localize="tutorialBasic-aUp-up-op-p-1">Select the Agent to upload</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-aUp-up-op-h5-2">Step 2</h5>
+                <img src="../image/run/agent_up_2.png" data-lity="">
+                <p data-localize="tutorialBasic-aUp-up-op-p-2-1">Enter name of Agent</p>
+                <p data-localize="tutorialBasic-aUp-up-op-p-2-2">You can use alphanumeric characters and underscores in the name </p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-aUp-up-op-h5-3">Step 3</h5>
+                <img src="../image/run/agent_up_3.png" data-lity="">
+                <p data-localize="tutorialBasic-aUp-up-op-p-3">Press the button to upload Agent data to RRS-OACIS.</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-aUp-up-op-h5-4">Step 4</h5>
+                <img src="../image/run/agent_up_4.png" data-lity="">
+                <p data-localize="tutorialBasic-aUp-up-op-p-4">Upload completed when displayed as above.</p>
+            </div>
+
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <div name="DownloadAgent" data-unique="DownloadAgent"></div><h2 id="tutorial_basic_agent_download" data-localize="tutorialBasic-aDr-h2">Download Agent</h2>
+
+    <h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HstHA50_I58" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialBasic-aDr-p-1">Describes how to download the Agent uploaded to RRS-OACIS</p>
+
+    <div name="Movetooperationscreen7" data-unique="Movetooperationscreen7"></div><h3 data-localize="tutorialBasic-aDr-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-aDr-move-p-1">in the browser</p>
+    <pre data-localize="tutorialBasic-aDr-move-pre">http://localhost: 3080 / agent / (agent's unique ID)</pre>
+    <p data-localize="tutorialBasic-aDr-move-p-2">accessed</p>
+
+    <p data-localize="tutorialBasic-aDr-move-p-3">Or you can move from the Agent screen by Link.</p>
+    <img src="../image/tutorial/agent/download_m.png" data-lity="">
+
+    <div name="Operation8" data-unique="Operation8"></div><h3 data-localize="tutorialBasic-aDr-op-h3">Operation</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="download_agent">
+            <div>
+                <h5 data-localize="tutorialBasic-aDr-op-h5-1">Step 1</h5>
+                <img src="../image/tutorial/agent/download_01.png" data-lity="">
+                <p data-localize="tutorialBasic-aDr-op-p-1">Press the "Download Zip" button.</p>
+            </div>
+
+            <div>
+                <h5 data-localize="tutorialBasic-aDr-op-h5-2">Step 2</h5>
+                <img src="../image/tutorial/agent/download_02.png" data-lity="">
+                <p data-localize="tutorialBasic-aDr-op-p-2">Agent data can be downloaded</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div name="ArchiveAgent" data-unique="ArchiveAgent"></div><h2 id="tutorial_basic_agent_archive" data-localize="tutorialBasic-aA-h2">Archive Agent</h2>
+
+    <h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EZmb6cAKLOo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialBasic-aA-p-1">Explain how to archive the uploaded agent.</p>
+    <p data-localize="tutorialBasic-aA-p-2">Archived Agent will no longer be displayed on simulation selection screen, etc.</p>
+
+    <div name="Movetooperationscreen10" data-unique="Movetooperationscreen10"></div><h3 data-localize="tutorialBasic-aA-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-aA-move-p-1">in the browser</p>
+    <pre data-localize="tutorialBasic-aA-move-pre-1">http://localhost: 3080/agent/(agent's unique ID)</pre>
+    <p data-localize="tutorialBasic-aA-move-p-2">accessed</p>
+
+    <p data-localize="tutorialBasic-aA-move-p-3">Or you can move from the Agent screen by Link.</p>
+    <img src="../image/tutorial/agent/download_m.png" data-lity="">
+
+    <div name="Operation11" data-unique="Operation11"></div><h3 data-localize="tutorialBasic-aA-op-h3">Operation</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="archive_agent">
+            <div>
+                <h5 data-localize="tutorialBasic-aA-op-h5-1">Step 1</h5>
+                <img src="../image/tutorial/agent/archive_01.png" data-lity="">
+                <p data-localize="tutorialBasic-aA-op-p-1">Press the "Archive" button</p>
+            </div>
+
+            <div>
+                <h5 data-localize="tutorialBasic-aA-op-h5-2">Step 2</h5>
+                <img src="../image/tutorial/agent/archive_02.png" data-lity="">
+                <p data-localize="tutorialBasic-aA-op-p-2">Archive is successful if the Archived item is True like the above image</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-archive" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-archive" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div name="DisplayarchivedAgent" data-unique="DisplayarchivedAgent"></div><h2 data-localize="tutorialBasic-aAL-h2">Display archived Agent</h2>
+    <p data-localize="tutorialBasic-aAL-p-1">Explain how to display the archived Agent</p>
+
+    <div name="Movetooperationscreen13" data-unique="Movetooperationscreen13"></div><h3 data-localize="tutorialBasic-aAL-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-aAL-move-p-1">in the browser</p>
+    <pre>http://localhost:3080/agents_archived
+</pre>
+    <p data-localize="tutorialBasic-aAL-move-p-2">Access to</p>
+
+    <img src="../image/tutorial/agent/archive_list.png" data-lity="">
+
+    <p data-localize="tutorialBasic-aAL-move-p-3">The data of the archived Agent like the image above is displayed in a list.</p>
+
+    <!-- ▲▲▲▲▲▲ Agent ▲▲▲▲▲▲ -->
+    <hr class="hr-success">
+
+    <!-- ▼▼▼▼▼▼ Map ▼▼▼▼▼▼ -->
+
+    <div name="UploadtheoriginalMap" data-unique="UploadtheoriginalMap"></div><h2 id="tutorial_basic_map_update" data-localize="tutorialBasic-mUp-h2">Upload the original Map</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QuTdoAfEdck" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<p data-localize="tutorialBasic-mUp-p-1">Explains how to upload the original Map to RRS-OACIS.</p>
+
+    <div name="prepared" data-unique="prepared"></div><h3 data-localize="tutorialBasic-mUp-preparation-h3">prepared</h3>
+
+    <p data-localize="tutorialBasic-mUp-preparation-p-1">Map data with the following specifications can be used with RRS-OACIS.</p>
+
+    <p data-localize="tutorialBasic-mUp-preparation-p-2">※ Zip file name is optional</p>
+
+    <div id="map_tree" class="file_tree panel panel-info">
+        <ul id="treeData2" style="display: none;">
+            <li class="folder expanded">config
+
+                <ul>
+                    <li>config files...</li>
+                </ul>
+            </li>
+            <li class="folder expanded">map
+                <ul>
+                    <li>scenario.xml</li>
+                    <li>map.gml</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div name="Upload16" data-unique="Upload16"></div><h3 data-localize="tutorialBasic-mUp-up-h3">Upload</h3>
+    <p data-localize="tutorialBasic-mUp-up-p-1">Upload Map data used in simulation to RRS-OACIS.</p>
+
+    <div name="Movetooperationscreen17" data-unique="Movetooperationscreen17"></div><h4 data-localize="tutorialBasic-mUp-up-move-h4">Move to operation screen</h4>
+
+    <p data-localize="tutorialBasic-mUp-up-move-p-1">Click "Maps" from the sidebar.</p>
+    <img src="../image/run/mu.png" data-lity="">
+
+
+    <p data-localize="tutorialBasic-mUp-up-move-p-2">Or, to the browser</p>
+    <pre>http://localhost:3080/maps
+</pre>
+    <p data-localize="tutorialBasic-mUp-up-move-p-3">to access</p>
+
+    <div name="Operation18" data-unique="Operation18"></div><h4 data-localize="tutorialBasic-mUp-up-op-h4">Operation</h4>
+
+    <div style="margin-bottom: 16px;">
+        <div class="upload_map">
+            <div>
+                <h5 data-localize="tutorialBasic-mUp-up-op-h5-1">Step 1</h5>
+                <img src="../image/run/map_up_1.png" data-lity="">
+                <p data-localize="tutorialBasic-mUp-up-op-p-1">Select Map to upload</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-mUp-up-op-h5-2">Step 2</h5>
+                <img src="../image/run/map_up_2.png" data-lity="">
+                <p data-localize="tutorialBasic-mUp-up-op-p-2-1">Enter the name of Map</p>
+                <p data-localize="tutorialBasic-mUp-up-op-p-2-2">You can use alphanumeric characters and underscores for the name </p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-mUp-up-op-h5-3">Step 3</h5>
+                <img src="../image/run/map_up_3.png" data-lity="">
+                <p data-localize="tutorialBasic-mUp-up-op-p-3">Press the button to upload Map data to RRS-OACIS.</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-mUp-up-op-h5-4">Step 4</h5>
+                <img src="../image/run/map_up_4.png" data-lity="">
+                <p data-localize="tutorialBasic-mUp-up-op-p-4">Upload completed when displayed as above</p>
+            </div>
+
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <div name="DownloadMap" data-unique="DownloadMap"></div><h2 id="tutorial_basic_map_download" data-localize="tutorialBasic-mDr-h2">Download Map</h2>
+
+    <h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n2A6U-Z2d5Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialBasic-mDr-p-1">Describes how to download Map uploaded to RRS-OACIS.</p>
+
+    <div name="Movetooperationscreen20" data-unique="Movetooperationscreen20"></div><h3 data-localize="tutorialBasic-mDr-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-mDr-move-p-1">in the browser</p>
+    <pre data-localize="tutorialBasic-mDr-move-pre-1">http://localhost: 3080/map/(unique ID of map)</pre>
+    <p data-localize="tutorialBasic-mDr-move-p-2">accessed</p>
+
+    <p data-localize="tutorialBasic-mDr-move-p-3">You can move from the Map screen by Link.</p>
+    <img src="../image/tutorial/map/download_m.png" data-lity="">
+
+    <div name="Operation21" data-unique="Operation21"></div><h3 data-localize="tutorialBasic-mDr-op-h3">Operation</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="download_map">
+            <div>
+                <h5 data-localize="tutorialBasic-mDr-op-h5-1">Step 1</h5>
+                <img src="../image/tutorial/map/download_01.png" data-lity="">
+                <p data-localize="tutorialBasic-mDr-op-p-1">Press the "Download Zip" button</p>
+            </div>
+
+            <div>
+                <h5 data-localize="tutorialBasic-mDr-op-h5-2">Step 2</h5>
+                <img src="../image/tutorial/map/download_02.png" data-lity="">
+                <p data-localize="tutorialBasic-mDr-op-p-2">Map data can be downloaded</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-map_download" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-map_download" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div name="ArchiveMap" data-unique="ArchiveMap"></div><h2 id="tutorial_basic_map_archive" data-localize="tutorialBasic-mA-h2">Archive Map</h2>
+
+    <h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HUebtAEtfac" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialBasic-mA-p-1">Explain how to archive the map uploaded to RRS-OACIS.</p>
+    <p data-localize="tutorialBasic-mA-p-2">The archived Map will no longer be displayed on the simulation selection screen, etc.</p>
+
+    <div name="Movetooperationscreen23" data-unique="Movetooperationscreen23"></div><h3 data-localize="tutorialBasic-mA-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-mA-move-p-1">in the browser</p>
+    <pre data-localize="tutorialBasic-mA-move-pre">http://localhost: 3080/map/(unique ID of map)</pre>
+    <p data-localize="tutorialBasic-mA-move-p-2">accessed</p>
+
+    <p data-localize="tutorialBasic-mA-move-p-3">You can move from the Map screen by Link.</p>
+    <img src="../image/tutorial/map/download_m.png" data-lity="">
+
+    <div name="Operation24" data-unique="Operation24"></div><h3 data-localize="tutorialBasic-mA-op-h3">Operation</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="archive_map">
+            <div>
+                <h5 data-localize="tutorialBasic-mA-op-h5-1">Step 1</h5>
+                <img src="../image/tutorial/map/archive_01.png" data-lity="">
+                <p data-localize="tutorialBasic-mA-op-p-1">Press the "Archive" button</p>
+            </div>
+
+            <div>
+                <h5 data-localize="tutorialBasic-mA-op-h5-2">Step 2</h5>
+                <img src="../image/tutorial/map/archive_02.png" data-lity="">
+                <p data-localize="tutorialBasic-mA-op-p-2">Archive is successful if Archived item is True like the above image</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-map_archive" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-map_archive" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div name="DisplayarchivedMap" data-unique="DisplayarchivedMap"></div><h2 data-localize="tutorialBasic-mAL-op-h2">Display archived Map</h2>
+    <p data-localize="tutorialBasic-mAL-op-p-1">Explain how to display the archived Map</p>
+
+    <div name="Movetooperationscreen26" data-unique="Movetooperationscreen26"></div><h3 data-localize="tutorialBasic-mAL-op-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialBasic-mAL-op-move-p-1">in the browser</p>
+    <pre>http://localhost:3080/maps_archived
+</pre>
+    <p data-localize="tutorialBasic-mAL-op-move-p-2">Access </p>
+
+    <img src="../image/tutorial/map/archive_list.png" data-lity="">
+
+    <p data-localize="tutorialBasic-mAL-op-move-p-3">The data of the archived map is displayed in a list like the above image.</p>
+
+    <!-- ▲▲▲▲▲▲ Map ▲▲▲▲▲▲ -->
+
+    <hr class="hr-success">
+
+    <!-- ▼▼▼▼▼▼ Cluster ▼▼▼▼▼▼ -->
+
+    <div name="AddCluster" data-unique="AddCluster"></div><h2 id="add_cluster" data-localize="tutorialBasic-cAdd-h2">Add Cluster</h2>
+
+
+    <h5>Video</h5>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/iz4zhfSaBD0?start=67" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+    <p data-localize="tutorialBasic-cAdd-p-1">Explain how to increase the number of clusters used in simulation.</p>
+
+    <p data-localize="tutorialBasic-cAdd-p-2">The OS assumes Ubuntu (I confirmed that it can be executed by the same operation on macOS.)</p>
+    <div name="Requiredenvironment" data-unique="Requiredenvironment"></div><h3 data-localize="tutorialBasic-cAdd-me-h3">Required environment</h3>
+    <ul>
+        <li data-localize="tutorialBasic-cAdd-me-li-1">Ubuntu 16.04.3 LTS</li>
+        <li data-localize="tutorialBasic-cAdd-me-li-2">Oracle JDK (checked 1.8.0_40)</li>
+        <li data-localize="tutorialBasic-cAdd-me-li-3">OpenSSH</li>
+        <li data-localize="tutorialBasic-cAdd-me-li-4">Ubuntu's local account with password set</li>
+    </ul>
+
+    <div name="Gotosettingscreen" data-unique="Gotosettingscreen"></div><h3 data-localize="tutorialBasic-cAdd-move-h3">Go to setting screen</h3>
+
+    <p data-localize="tutorialBasic-cAdd-move-p-1">in the browser</p>
+    <pre>    http://localhost:3080/settings-clusters
+</pre>
+    <p data-localize="tutorialBasic-cAdd-move-p-2">Access </p>
+
+    <img src="../image/install/default_cluster.png" data-lity="">
+
+    <div name="SettingupCluster" data-unique="SettingupCluster"></div><h3 data-localize="tutorialBasic-cAdd-setting-h3">Setting up Cluster</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="setup_host">
+            <div>
+                <h5 data-localize="tutorialBasic-cAdd-setting-h5-1">Step 1</h5>
+                <img src="../image/install/cluster_init_01.png" data-lity="">
+                <p data-localize="tutorialBasic-cAdd-setting-p-1">Enter the user name and IP address of the PC you want to cluster, in the format "user name @ IP address". </p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-cAdd-setting-h5-2">Step 2</h5>
+                <img src="../image/install/cluster_init_02.png" data-lity="">
+                <p data-localize="tutorialBasic-cAdd-setting-p-2-1">Sets the saving format of the simulation log file Select the format supported by the cluster OS</p>
+                <p data-localize="tutorialBasic-cAdd-setting-p-2-2">* Ubuntu is the default gzip format and there is no problem.</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-cAdd-setting-h5-3">Step 3</h5>
+                <img src="../image/install/cluster_init_03.png" data-lity="">
+                <p data-localize="tutorialBasic-cAdd-setting-p-3-1">Enter the cluster password</p>
+                <p data-localize="tutorialBasic-cAdd-setting-p-3-2">※ Password of Ubuntu account</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-cAdd-setting-h5-4">Step 4</h5>
+                <img src="../image/install/cluster_init_04.png" data-lity="">
+                <p data-localize="tutorialBasic-cAdd-setting-p-4">Add by pressing the Add button.</p>
+            </div>
+            <div>
+                <h5 data-localize="tutorialBasic-cAdd-setting-h5-5">Step 5</h5>
+                <img src="../image/install/cluster_init_success.png" data-lity="">
+                <p data-localize="tutorialBasic-cAdd-setting-p-5">Setting is completed when displayed as above.</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-setup_host" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-setup_host" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <div class="panel panel-info">
+        <span class="label label-info">Tips</span>
+        <div class="panel-body" data-localize="tutorialBasic-cAdd-setting-tips">It is also possible to build one cluster with only 1 to 3, there is no need to prepare 4 sets.</div>
+    </div>
+
+    <!-- ▲▲▲▲▲▲ Cluster ▲▲▲▲▲▲ -->
+
+    <div class="pull-right">
+        <a class="btn btn-default" href="?page=tutorial" data-localize="tutorialBasic-btn-t">Go to the tutorial list</a>
+        <a class="btn btn-info" href="?page=tutorial/index.html#run" data-localize="tutorialBasic-btn-r">To the research tutorial</a>
+        <a class="btn btn-info" href="?page=tutorial/index.html#competition" data-localize="tutorialBasic-btn-c">To the Tournament Tutorial</a>
+    </div>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+
+            $('.upload_agent').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-Agent"),
+                nextArrow : $("#nextArrow-Agent")
+
+            });
+
+            $('.upload_map').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-Map"),
+                nextArrow : $("#nextArrow-Map")
+
+            });
+
+            $('.download_agent').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-download"),
+                nextArrow : $("#nextArrow-download")
+
+            });
+
+            $('.archive_agent').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-archive"),
+                nextArrow : $("#nextArrow-archive")
+
+            });
+
+            $('.download_map').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-map_download"),
+                nextArrow : $("#nextArrow-map_download")
+
+            });
+
+            $('.archive_map').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-map_archive"),
+                nextArrow : $("#nextArrow-map_archive")
+
+            });
+
+            $('.setup_host').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-setup_host"),
+                nextArrow : $("#nextArrow-setup_host")
+
+            });
+
+            $("#agent_tree").fancytree();
+
+            $("#map_tree").fancytree();
+
+            /*
+            var tree = $("#agent_tree").fancytree('getTree');
+
+            var node = tree.getNodeByKey("node_4.1");
+            //node.extraClasses = "custom1";
+            //node.renderTitle();
+            node = tree.getNodeByKey("node_4.2");
+            node.icon = "customDoc1.gif";
+            node.renderTitle();
+
+            */
+
+        });
+
+
+    </script>

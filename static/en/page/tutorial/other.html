@@ -1,0 +1,127 @@
+<h1 class="title" data-localize="tutorialOther-h1">Other tutorials</h1>
+
+<div name="拡張機能を有効化する." data-unique="拡張機能を有効化する."></div><h2 id="tutorial_other_app_enabled"
+                                                            data-localize="tutorialOther-app-h2">To enable the
+    extension.</h2>
+
+<h5>Video</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PSZgJ3EhbNc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p data-localize="tutorialOther-app-p-1">RRS-OACIS in various feature is disabled by default. It is possible to use by
+    activating the setting screen.</p>
+
+<div name="操作画面に移動" data-unique="操作画面に移動"></div><h3 data-localize="tutorialOther-app-move-h3">Move to the operation
+    screen</h3>
+<p data-localize="tutorialOther-app-move-p-1">In the browser</p>
+<pre>http://localhost:3080/settings
+</pre>
+<p data-localize="tutorialOther-app-move-p-2">Go to.</p>
+
+<div name="操作" data-unique="操作"></div><h3 data-localize="tutorialOther-app-op-h3">Operation</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="run_e">
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-1">step 1</h5>
+            <img src="../image/run/rune_1.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-1">Move by clicking on the "Apps" in order to move to the function
+                list screen</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-2">step 2</h5>
+            <img src="../image/run/rune_2.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-2">This time, select the Run</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-3">step 3</h5>
+            <img src="../image/run/rune_3.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-3">Enable the feature by pressing the "Enabled" button.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialOther-app-op-h5-4">step 4</h5>
+            <img src="../image/run/rune_4.png" data-lity="">
+            <p data-localize="tutorialOther-app-op-p-4">When you see as above is the activation is complete.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<div name="RRS-OACISを更新する." data-unique="RRS-OACISを更新する."></div><h2 id="tutorial_other_update"
+                                                                    data-localize="tutorialOther-update-h2">To update
+    the RRS-OACIS</h2>
+<p data-localize="tutorialOther-update-p-1">This section describes how to update.</p>
+
+<div name="操作画面に移動4" data-unique="操作画面に移動4"></div><h3 data-localize="tutorialOther-update-move-h3">Move to the operation
+    screen</h3>
+<p data-localize="tutorialOther-update-move-p-1">In the browser</p>
+<pre>http://localhost:3080/settings-general
+</pre>
+<p data-localize="tutorialOther-update-move-p-2">Go to.</p>
+
+<div name="操作5" data-unique="操作5"></div><h3 data-localize="tutorialOther-update-op-h3">Operation</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="update_oacis">
+        <div>
+            <h5 data-localize="tutorialOther-update-op-h5-1">step 1</h5>
+            <img src="../image/tutorial/setting/update_01.png" data-lity="">
+            <p data-localize="tutorialOther-update-op-p-1">Press the button "Update".</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialOther-update-op-h5-2">step 2</h5>
+            <img src="../image/tutorial/setting/update_02.png" data-lity="">
+            <p data-localize="tutorialOther-update-op-p-2">Button is the update success if it becomes "Latest version"
+                as shown in the image above.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-update" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+
+<div class="pull-right">
+    <a class="btn btn-default" href="?page=tutorial" data-localize="tutorialOther-btn-t">To Tutorial List</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $('.update_oacis').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow: $("#prevArrow-update"),
+            nextArrow: $("#nextArrow-update")
+
+        });
+
+        $('.run_e').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow: $("#prevArrow-run"),
+            nextArrow: $("#nextArrow-run")
+
+        });
+
+
+    });
+
+
+</script>

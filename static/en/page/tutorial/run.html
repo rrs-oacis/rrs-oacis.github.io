@@ -1,0 +1,84 @@
+<div id="pageContents" class="col-sm-9"><h1 class="title" data-localize="tutorialRun-h1">Tutorial for research</h1>
+
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/O_kWH88YKkw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+    <p data-localize="tutorialRun-p-1">Please refer to <a href="?page=run"> How to Run </a> for basic usage</p>
+
+    <hr>
+
+    <div name="Downloadsimulationlog" data-unique="Downloadsimulationlog"></div><h2 id="tutorial_run_log_download" data-localize="tutorialRun-download-h2">Download simulation log</h2>
+    <p data-localize="tutorialRun-download-p-1">Explain how to download simulation logs</p>
+
+    <div name="Movetooperationscreen" data-unique="Movetooperationscreen"></div><h3 data-localize="tutorialRun-download-move-h3">Move to operation screen</h3>
+    <p data-localize="tutorialRun-download-move-p-1">in the browser</p>
+    <pre>http://localhost:3080/run
+</pre>
+    <p data-localize="tutorialRun-download-move-p-2">accessed</p>
+
+    <p data-localize="tutorialRun-download-move-p-eImage">(the following images can be magnified)</p>
+
+    <div name="Operation" data-unique="Operation"></div><h3 data-localize="tutorialRun-download-op-h3">Operation</h3>
+
+    <div style="margin-bottom: 16px;">
+        <div class="download_run">
+            <div>
+                <h5 data-localize="tutorialRun-download-op-h5-1">Step 1</h5>
+                <img src="../image/tutorial/run/download_01.png" data-lity="">
+                <p data-localize="tutorialRun-download-op-p-1">Press the link for download download</p>
+            </div>
+
+            <div>
+                <h5 data-localize="tutorialRun-download-op-h5-2">Step 2</h5>
+                <img src="../image/tutorial/run/download_02.png" data-lity="">
+                <p data-localize="tutorialRun-download-op-p-2">Simulation log data can be downloaded</p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+            <button id="prevArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+            <button id="nextArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+        </div>
+
+    </div>
+
+    <div class="panel panel-info">
+        <span class="label label-info">Tips</span>
+        <div class="panel-body" data-localize="tutorialRun-download-op-tips">Items of the Run List will be hidden depending on the size of the monitor You can display by horizontally scrolling.</div>
+    </div>
+
+    <div class="pull-right">
+        <a class="btn btn-default" href="?page=tutorial" data-localize="tutorialRun-btn-t">Go to the tutorial list</a>
+        <a class="btn btn-info" href="?page=tutorial/index.html#basic" data-localize="tutorialRun-btn-b">To the basic tutorial</a>
+        <a class="btn btn-info" href="?page=tutorial/index.html#competition" data-localize="tutorialRun-btn-c">To the tutorial for convention</a>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('.download_run').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-download"),
+                nextArrow : $("#nextArrow-download")
+
+            });
+
+            $('.archive_agent').slick({
+                dots: true,
+                infinite: false,
+                //appendArrows: $("#arrow")
+                prevArrow : $("#prevArrow-archive"),
+                nextArrow : $("#nextArrow-archive")
+
+            });
+
+        });
+
+
+    </script>
+</div>

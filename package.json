@@ -1,0 +1,21 @@
+{
+  "name": "rrs_oacis_doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "chokidar": "^1.7.0",
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "connect-browser-sync": "^2.1.0"
+  }
+}

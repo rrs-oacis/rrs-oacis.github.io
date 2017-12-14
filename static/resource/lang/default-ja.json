@@ -1,0 +1,21 @@
+{
+  "default-h1": "はじめに",
+  "default-h2-about": "RRS-OACISについて",
+  "default-h2-about-p": "RRS-OACIS (RoboCupRescue Simulation OACIS)は，RoboCupRescue simulation用のシミュレーション管理ソフトウェアです．Agent(災害シミュレーションに置いて動作する自立プログラム)とMap(地理データ、シナリオデータ)，シミュレーション自体と実行結果を管理します．RRS-OACISでは管理したデータを使用して研究や競技会をすることが出来ます．",
+
+  "default-h3-screenshot": "スクリーンショット",
+  "default-screenshot-p": "（以下の画像は拡大出来ます）",
+
+  "default-h2-document": "ドキュメントの構成",
+  "default-document-p": "本ドキュメントでは，RRS-OACIS使用したシミュレーションの仕方を説明します. 構成は以下のとおりです．",
+  "default-document-li-install": "インストール",
+  "default-document-li-install-p": "サーバーのインストールと初期設定をおこないます.",
+  "default-document-li-run": "とりあえず実行",
+  "default-document-li-run-p": "AgentとMapのアップロード方法を説明した後, Run Appを使用した簡単なシミュレーション方法を紹介します．",
+  "default-document-li-tutorial": "チュートリアル",
+  "default-document-li-tutorial-p": "各種操作についての説明です",
+  "default-document-li-appendix": "付録",
+  "default-document-li-appendix-p": "Appの追加方法を載せています",
+
+  "default-btn-next": "次へ"
+}

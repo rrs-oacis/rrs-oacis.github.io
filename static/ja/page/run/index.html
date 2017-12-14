@@ -1,0 +1,358 @@
+<h1 class="title" data-localize="run-h1">とりあえず実行</h1>
+<p data-localize="run-h1-p-1">
+    このパートを開始する前に <a href="?page=install">インストール</a> を済ませてください．
+</p>
+
+
+<div class="panel panel-primary">
+    <span class="label label-primary">Data</span>
+    <div class="panel-body">
+        <p data-localize="run-h1-tips-p">
+            このチュートリアルは以下のサンプルデータを使用することを前提に説明します.
+            事前に以下のリンクからダウンロードを完了してください.
+        </p>
+        <ul>
+            <li data-localize="run-h1-tips-li-1"><a href="./resource/sample/agent_test.zip" download>Agentのデータ</a></li>
+            <li data-localize="run-h1-tips-li-2"><a href="./resource/sample/map_test.zip" download>Mapのデータ</a></li>
+        </ul>
+
+
+    </div>
+</div>
+
+<hr>
+<h2 id="run_agent_upload" data-localize="run-agent-h2">Agentをアップロード</h2>
+<p data-localize="run-agent-p-1">
+    シミュレーションで使用するAgentデータをRRS-OACISにアップロードします．
+</p>
+
+<h3 data-localize="run-agent-move-h3">操作画面に移動</h3>
+
+<p data-localize="run-agent-move-p-1">
+    サイドバーから「Agents」をクリックします.</p>
+<p data-localize="run-agent-move-p-eImage">（以下の画像は拡大出来ます）</p>
+<img src="../image/run/au.png" data-lity="">
+
+<p data-localize="run-agent-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/agents
+</pre>
+<p data-localize="run-agent-move-p-3">
+    と入力してアクセスします.
+</p>
+
+
+
+<h3 data-localize="run-agent-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="upload_agent">
+        <div>
+            <h5 data-localize="run-agent-op-h5-1">ステップ1</h5>
+            <img src="../image/run/agent_up_1.png" data-lity="">
+            <p data-localize="run-agent-op-p-1">アップロードするAgentを選択します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-agent-op-h5-2">ステップ2</h5>
+            <img src="../image/run/agent_up_2.png" data-lity="">
+            <p data-localize="run-agent-op-p-2">Agentの名前を入力します</p>
+        </div>
+        <div>
+            <h5 data-localize="run-agent-op-h5-3">ステップ3</h5>
+            <img src="../image/run/agent_up_3.png" data-lity="">
+            <p data-localize="run-agent-op-p-3">AgentデータをRRS-OACISにアップロードするためにボタンを押します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-agent-op-h5-4">ステップ4</h5>
+            <img src="../image/run/agent_up_4.png" data-lity="">
+            <p data-localize="run-agent-op-p-4">上のように表示されたらアップロード完了です.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="run-agent-op-tips-1">
+
+        Agentの名前は任意の文字列を設定できます.
+
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="run-agent-op-tips-2">
+
+        Agentのディレクトリ構成を知りたいなら
+        <a href="?page=tutorial/basic.html#tutorial_basic_agent_update">オリジナルのAgentをアップロードするには？</a>
+        を見てください．
+
+    </div>
+</div>
+
+<hr>
+
+<h2 data-localize="run-map-h2">Mapをアップロード</h2>
+<p data-localize="run-map-p-1">
+    シミュレーションで使用するMapデータをRRS-OACISにアップロードします.
+</p>
+
+<h3 data-localize="run-map-move-h3">操作画面に移動</h3>
+
+<p data-localize="run-map-move-p-1">
+    サイドバーから「Maps」をクリックします.
+</p>
+<img src="../image/run/mu.png" data-lity="">
+
+<p data-localize="run-map-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/maps
+</pre>
+<p data-localize="run-map-move-p-3">
+    と入力してアクセスします.
+</p>
+
+<h3 data-localize="run-map-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="upload_map">
+        <div>
+            <h5 data-localize="run-map-op-h5-1">ステップ1</h5>
+            <img src="../image/run/map_up_1.png" data-lity="">
+            <p data-localize="run-map-op-p-1">アップロードするMapを選択します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-map-op-h5-2">ステップ2</h5>
+            <img src="../image/run/map_up_2.png" data-lity="">
+            <p data-localize="run-map-op-p-2">Mapの名前を入力します</p>
+        </div>
+        <div>
+            <h5 data-localize="run-map-op-h5-3">ステップ3</h5>
+            <img src="../image/run/map_up_3.png" data-lity="">
+            <p data-localize="run-map-op-p-3">MapデータをRRS-OACISにアップロードするためにボタンを押します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-map-op-h5-4">ステップ4</h5>
+            <img src="../image/run/map_up_4.png" data-lity="">
+            <p data-localize="run-map-op-p-4">上のように表示されたらアップロード完了です.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="run-map-op-tips-1">
+
+        Mapの名前は任意の文字列を設定できます.
+
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="run-map-op-tips-2">
+
+        Mapのディレクトリ構成を知りたいなら
+        <a href="?page=tutorial/basic.html#tutorial_basic_map_update">オリジナルのMapをアップロードするには？</a>
+        を見てください．
+
+    </div>
+</div>
+
+<hr>
+
+<h2 data-localize="run-app-h2">シミュレーション用の機能を有効化する</h2>
+
+<p data-localize="run-app-p-1">
+    デフォルトでは無効になっているシミュレーション用の機能を有効化します．
+</p>
+
+<h3 data-localize="run-app-move-h3">操作画面に移動</h3>
+
+<p data-localize="run-app-move-p-1">
+    サイドバーから「Settings」をクリックします.
+</p>
+<img src="../image/run/su.png" data-lity="">
+
+<p data-localize="run-app-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/settings
+</pre>
+<p data-localize="run-app-move-p-3">
+    と入力してアクセスします.
+</p>
+
+
+<h3 data-localize="run-app-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="run_e">
+        <div>
+            <h5 data-localize="run-app-op-h5-1">ステップ1</h5>
+            <img src="../image/run/rune_1.png" data-lity="">
+            <p data-localize="run-app-op-p-1">機能一覧画面に移動するために「Apps」をクリックして移動します</p>
+        </div>
+        <div>
+            <h5 data-localize="run-app-op-h5-2">ステップ2</h5>
+            <img src="../image/run/rune_2.png" data-lity="">
+            <p data-localize="run-app-op-p-2">Runを選択します</p>
+        </div>
+        <div>
+            <h5 data-localize="run-app-op-h5-3">ステップ3</h5>
+            <img src="../image/run/rune_3.png" data-lity="">
+            <p data-localize="run-app-op-p-3">「Enabled」ボタンを押して機能を有効化します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-app-op-h5-4">ステップ4</h5>
+            <img src="../image/run/rune_4.png" data-lity="">
+            <p data-localize="run-app-op-p-4">上のように表示されたら有効化が完了です．</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-run" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 data-localize="run-simulation-h2">シミュレーションをする</h2>
+
+<p data-localize="run-simulation-p-1">
+    アップロードしたデータでシミュレーションをしてみます.
+</p>
+
+<h3 data-localize="run-simulation-move-h3">操作画面に移動</h3>
+
+<p data-localize="run-simulation-move-p-1">
+    サイドバーから「Run」をクリックします.
+</p>
+<img src="../image/run/ru.png" data-lity="">
+
+
+<p data-localize="run-simulation-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/run
+</pre>
+<p data-localize="run-simulation-move-p-3">
+    と入力してアクセスします.
+</p>
+
+<h3 data-localize="run-simulation-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="upload_simulation">
+        <div>
+            <h5 data-localize="run-simulation-op-h5-1">ステップ1</h5>
+            <img src="../image/run/sm_1.png" data-lity="">
+            <p data-localize="run-simulation-op-p-1">Mapをリストから選択します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-simulation-op-h5-2">ステップ2</h5>
+            <img src="../image/run/sm_2.png" data-lity="">
+            <p data-localize="run-simulation-op-p-2">Agentをリストから選択します</p>
+        </div>
+        <div>
+            <h5 data-localize="run-simulation-op-h5-3">ステップ3</h5>
+            <img src="../image/run/sm_3.png" data-lity="">
+            <p data-localize="run-simulation-op-p-3">ボタンを押してシミュレーションを開始します.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-simulation-op-h5-4">ステップ4</h5>
+            <img src="../image/run/sm_4.png" data-lity="">
+            <p data-localize="run-simulation-op-p-4">上のように表示されたらシミュレーションが登録されました.</p>
+        </div>
+        <div>
+            <h5 data-localize="run-simulation-op-h5-5">ステップ5</h5>
+            <img src="../image/run/sm_5.png" data-lity="">
+            <p data-localize="run-simulation-op-p-5-1">上のようにstatusに「finished」表示されたらシミュレーションは終了です.</p>
+            <p data-localize="run-simulation-op-p-5-2">statusが「running」と表示されている時はシミュレーションが実行中です．「none」の時はシミュレーションがまだ開始されていません．</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-Simulation" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-Simulation" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<div class="pull-right">
+    <a class="btn btn-default btn btn-info" href="?page=run" data-localize="run-btn-prev">前へ</a>
+    <a class="btn btn-default btn btn-info" href="?page=tutorial" data-localize="run-btn-next">次へ</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('.upload_agent').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-Agent"),
+            nextArrow : $("#nextArrow-Agent")
+
+        });
+
+        $('.upload_map').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-Map"),
+            nextArrow : $("#nextArrow-Map")
+
+        });
+
+        $('.upload_simulation').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-Simulation"),
+            nextArrow : $("#nextArrow-Simulation")
+
+        });
+
+        $('.run_e').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-run"),
+            nextArrow : $("#nextArrow-run")
+
+        });
+
+    });
+
+
+</script>
+

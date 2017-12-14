@@ -1,0 +1,639 @@
+<h1 class="title" data-localize="tutorialBasic-h1">基礎チュートリアル</h1>
+
+<p data-localize="tutorialBasic-p-1">
+    基本的な使い方は <a href="?page=run">とりあえず実行</a> を参考にしてください.
+</p>
+
+<hr class="hr-success">
+
+<!-- ▼▼▼▼▼▼ Agent ▼▼▼▼▼▼ -->
+<h2 id="tutorial_basic_agent_update" data-localize="tutorialBasic-aUp-h2">オリジナルのAgentをアップロードする</h2>
+<p data-localize="tutorialBasic-aUp-p-1">RRS-OACISにオリジナルのAgentのアップロード方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-aUp-create-h3">作成</h3>
+
+<p data-localize="tutorialBasic-aUp-create-p-1">
+    RRS-OACISでは<a href="https://rcrs-adf.github.io/ja/#">RoboCupRescue Simulation Agent Development Framework (RCRS-ADF)</a>を前提に使用したAgentを使うことができます．
+<a href="https://rcrs-adf.github.io/ja/?sbs/">RCRS-ADFのチュートリアル</a>を参考にAgentの作成をしてください.
+</p>
+
+
+<h3 data-localize="tutorialBasic-aUp-preparation-h3">用意</h3>
+<p data-localize="tutorialBasic-aUp-preparation-p-1">Agentの作成をしたら下記のような構成のAgentのZipファイルを用意します.</p>
+
+<p data-localize="tutorialBasic-aUp-preparation-p-2">※Zipのファイル名は任意です.</p>
+
+<div id="agent_tree" class="file_tree panel panel-info">
+    <ul id="treeData" style="display: none;">
+        <li class="folder expanded">src
+
+            <ul>
+                <li>rescue code...</li>
+            </ul>
+        </li>
+        <li class="folder expanded">config
+            <ul>
+                <li>module.cfg</li>
+            </ul>
+        </li>
+        <li class="folder expanded">data
+            <ul>
+                <li>develop.json</li>
+            </ul>
+        </li>
+        <li class="folder">library
+            <ul>
+                <li class="folder">rescue
+                    <ul>
+                        <li class="folder">adf
+                            <ul>
+                                <li>adf-core.jar</li>
+                            </ul>
+                        </li>
+                        <li class="folder">rescuecore
+                            <ul>
+                                <li>clear.jar</li>
+                                <li>collapse.jar</li>
+                                <li>gis2.jar</li>
+                                <li>handy.jar</li>
+                                <li>human.jar</li>
+                                <li>ignition.jar</li>
+                                <li>kernel.jar</li>
+                                <li>maps.jar</li>
+                                <li>misc.jar</li>
+                                <li>rescuecore2.jar</li>
+                                <li>resq-fire.jar</li>
+                                <li>sample.jar</li>
+                                <li>standard.jar</li>
+                                <li>traffic3.jar</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="folder">util
+                    <ul>
+                        <li>commons-math3-3.4.1.jar</li>
+                        <li>guava-20.0.jar</li>
+                        <li>jackson-annotations-2.8.5.jar</li>
+                        <li>jackson-core-2.8.5.jar</li>
+                        <li>jackson-databind-2.8.5.jar</li>
+                        <li>jackson-dataformat-msgpack-0.8.11.jar</li>
+                        <li>jsr305-3.0.1.jar</li>
+                        <li>msgpack-core-0.8.11.jar</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>compile.sh</li>
+        <li>precompute.sh</li>
+        <li>start.sh</li>
+
+    </ul>
+</div>
+
+<h3 data-localize="tutorialBasic-aUp-up-h3">アップロード</h3>
+<p data-localize="tutorialBasic-aUp-up-p-1">
+    シミュレーションで使用するAgentデータをRRS-OACISにアップロードします．
+</p>
+
+<h4 data-localize="tutorialBasic-aUp-up-move-h4">操作画面に移動</h4>
+
+<p data-localize="tutorialBasic-aUp-up-move-p-1">
+    サイドバーから「Agents」をクリックします.
+</p>
+<p data-localize="tutorialBasic-aUp-up-move-p-eImage">（以下の画像は拡大出来ます）</p>
+<img src="../image/run/au.png" data-lity="">
+
+
+<p data-localize="tutorialBasic-aUp-up-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/agents
+</pre>
+<p data-localize="tutorialBasic-aUp-up-move-p-3">
+    と入力してアクセスします.
+</p>
+
+<h4 data-localize="tutorialBasic-aUp-up-op-h4">操作</h4>
+
+<div style="margin-bottom: 16px;">
+    <div class="upload_agent">
+        <div>
+            <h5 data-localize="tutorialBasic-aUp-up-op-h5-1">ステップ1</h5>
+            <img src="../image/run/agent_up_1.png" data-lity="">
+            <p data-localize="tutorialBasic-aUp-up-op-p-1">アップロードするAgentを選択します.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-aUp-up-op-h5-2">ステップ2</h5>
+            <img src="../image/run/agent_up_2.png" data-lity="">
+            <p data-localize="tutorialBasic-aUp-up-op-p-2-1">Agentの名前を入力します.</p>
+            <p data-localize="tutorialBasic-aUp-up-op-p-2-2">※名前には英数字とアンダースコアが使用できます</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-aUp-up-op-h5-3">ステップ3</h5>
+            <img src="../image/run/agent_up_3.png" data-lity="">
+            <p data-localize="tutorialBasic-aUp-up-op-p-3">AgentデータをRRS-OACISにアップロードするためにボタンを押します.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-aUp-up-op-h5-4">ステップ4</h5>
+            <img src="../image/run/agent_up_4.png" data-lity="">
+            <p data-localize="tutorialBasic-aUp-up-op-p-4">上のように表示されたらアップロード完了です.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-Agent" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+
+<hr>
+
+<h2 id="tutorial_basic_agent_download" data-localize="tutorialBasic-aDr-h2">Agentをダウンロードする</h2>
+<p data-localize="tutorialBasic-aDr-p-1">RRS-OACISにアップロードしたAgentのダウンロード方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-aDr-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-aDr-move-p-1">
+    ブラウザで
+</p>
+<pre data-localize="tutorialBasic-aDr-move-pre">
+http://localhost:3080/agent/(agentのユニークID)
+</pre>
+<p data-localize="tutorialBasic-aDr-move-p-2">
+    にアクセスします.
+</p>
+
+<p data-localize="tutorialBasic-aDr-move-p-3">または，Agentの画面からLinkで移動できます.</p>
+<img src="../image/tutorial/agent/download_m.png" data-lity="">
+
+<h3 data-localize="tutorialBasic-aDr-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="download_agent">
+        <div>
+            <h5 data-localize="tutorialBasic-aDr-op-h5-1">ステップ1</h5>
+            <img src="../image/tutorial/agent/download_01.png" data-lity="">
+            <p data-localize="tutorialBasic-aDr-op-p-1">「Download Zip」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialBasic-aDr-op-h5-2">ステップ2</h5>
+            <img src="../image/tutorial/agent/download_02.png" data-lity="">
+            <p data-localize="tutorialBasic-aDr-op-p-2">Agentのデータがダウンロードできます.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-download" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 id="tutorial_basic_agent_archive" data-localize="tutorialBasic-aA-h2">Agentをアーカイブする</h2>
+<p data-localize="tutorialBasic-aA-p-1">アップロードしたAgentをアーカイブする方法を説明します. </p>
+<p data-localize="tutorialBasic-aA-p-2">アーカイブされたAgentはシミュレーションの選択画面などで表示されなくなります. </p>
+
+<h3 data-localize="tutorialBasic-aA-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-aA-move-p-1">
+    ブラウザで
+</p>
+<pre data-localize="tutorialBasic-aA-move-pre-1">
+http://localhost:3080/agent/(agentのユニークID)
+</pre>
+<p data-localize="tutorialBasic-aA-move-p-2">
+    にアクセスします.
+</p>
+
+<p data-localize="tutorialBasic-aA-move-p-3">または, Agentの画面からLinkで移動できます.</p>
+<img src="../image/tutorial/agent/download_m.png" data-lity="">
+
+<h3 data-localize="tutorialBasic-aA-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="archive_agent">
+        <div>
+            <h5 data-localize="tutorialBasic-aA-op-h5-1">ステップ1</h5>
+            <img src="../image/tutorial/agent/archive_01.png" data-lity="">
+            <p data-localize="tutorialBasic-aA-op-p-1">「Archive」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialBasic-aA-op-h5-2">ステップ2</h5>
+            <img src="../image/tutorial/agent/archive_02.png" data-lity="">
+            <p data-localize="tutorialBasic-aA-op-p-2">上の画像のようにArchivedの項目がTrueになっていればアーカイブ成功です.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-archive" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-archive" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 data-localize="tutorialBasic-aAL-h2">アーカイブしたAgentを表示する</h2>
+<p data-localize="tutorialBasic-aAL-p-1">アーカイブしたAgentの表示方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-aAL-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-aAL-move-p-1">
+    ブラウザで
+</p>
+<pre>
+http://localhost:3080/agents_archived
+</pre>
+<p data-localize="tutorialBasic-aAL-move-p-2">
+    にアクセスします.
+</p>
+
+<img src="../image/tutorial/agent/archive_list.png" data-lity="">
+
+<p data-localize="tutorialBasic-aAL-move-p-3">上の画像のようにアーカイブされたAgentのデータがリストで表示されます. </p>
+
+<!-- ▲▲▲▲▲▲ Agent ▲▲▲▲▲▲ -->
+<hr class="hr-success">
+
+<!-- ▼▼▼▼▼▼ Map ▼▼▼▼▼▼ -->
+
+<h2 id="tutorial_basic_map_update" data-localize="tutorialBasic-mUp-h2">オリジナルのMapをアップロードする</h2>
+<p data-localize="tutorialBasic-mUp-p-1">RRS-OACISにオリジナルのMapのアップロード方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-mUp-preparation-h3">用意</h3>
+
+<p data-localize="tutorialBasic-mUp-preparation-p-1">RRS-OACISでは下記の仕様のMapデータを使用することが出来ます．</p>
+
+<p data-localize="tutorialBasic-mUp-preparation-p-2">※Zipのファイル名は任意です.</p>
+
+<div id="map_tree" class="file_tree panel panel-info">
+    <ul id="treeData2" style="display: none;">
+        <li class="folder expanded">config
+
+            <ul>
+                <li>config files...</li>
+            </ul>
+        </li>
+        <li class="folder expanded">map
+            <ul>
+                <li>scenario.xml</li>
+                <li>map.gml</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<h3 data-localize="tutorialBasic-mUp-up-h3">アップロード</h3>
+<p data-localize="tutorialBasic-mUp-up-p-1">
+    シミュレーションで使用するMapデータをRRS-OACISにアップロードします.
+</p>
+
+<h4 data-localize="tutorialBasic-mUp-up-move-h4">操作画面に移動</h4>
+
+<p data-localize="tutorialBasic-mUp-up-move-p-1">
+    サイドバーから「Maps」をクリックします.
+</p>
+    <img src="../image/run/mu.png" data-lity="">
+
+
+<p data-localize="tutorialBasic-mUp-up-move-p-2">
+    または，ブラウザに
+</p>
+<pre>
+http://localhost:3080/maps
+</pre>
+<p data-localize="tutorialBasic-mUp-up-move-p-3">
+    と入力してアクセスします.
+</p>
+
+<h4 data-localize="tutorialBasic-mUp-up-op-h4">操作</h4>
+
+<div style="margin-bottom: 16px;">
+    <div class="upload_map">
+        <div>
+            <h5 data-localize="tutorialBasic-mUp-up-op-h5-1">ステップ1</h5>
+            <img src="../image/run/map_up_1.png" data-lity="">
+            <p data-localize="tutorialBasic-mUp-up-op-p-1">アップロードするMapを選択します.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-mUp-up-op-h5-2">ステップ2</h5>
+            <img src="../image/run/map_up_2.png" data-lity="">
+            <p data-localize="tutorialBasic-mUp-up-op-p-2-1">Mapの名前を入力します</p>
+            <p data-localize="tutorialBasic-mUp-up-op-p-2-2">※名前には英数字とアンダースコアが使用できます</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-mUp-up-op-h5-3">ステップ3</h5>
+            <img src="../image/run/map_up_3.png" data-lity="">
+            <p data-localize="tutorialBasic-mUp-up-op-p-3">MapデータをRRS-OACISにアップロードするためにボタンを押します.</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-mUp-up-op-h5-4">ステップ4</h5>
+            <img src="../image/run/map_up_4.png" data-lity="">
+            <p data-localize="tutorialBasic-mUp-up-op-p-4">上のように表示されたらアップロード完了です.</p>
+        </div>
+
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-Map" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+
+<hr>
+
+<h2 id="tutorial_basic_map_download" data-localize="tutorialBasic-mDr-h2">Mapをダウンロードする</h2>
+<p data-localize="tutorialBasic-mDr-p-1">RRS-OACISにアップロードしたMapのダウンロード方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-mDr-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-mDr-move-p-1">
+    ブラウザで
+</p>
+<pre data-localize="tutorialBasic-mDr-move-pre-1">
+http://localhost:3080/map/(mapのユニークID)
+</pre>
+<p data-localize="tutorialBasic-mDr-move-p-2">
+    にアクセスします.
+</p>
+
+<p data-localize="tutorialBasic-mDr-move-p-3">Mapの画面からLinkで移動できます.</p>
+<img src="../image/tutorial/map/download_m.png" data-lity="">
+
+<h3 data-localize="tutorialBasic-mDr-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="download_map">
+        <div>
+            <h5 data-localize="tutorialBasic-mDr-op-h5-1">ステップ1</h5>
+            <img src="../image/tutorial/map/download_01.png" data-lity="">
+            <p data-localize="tutorialBasic-mDr-op-p-1">「Download Zip」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialBasic-mDr-op-h5-2">ステップ2</h5>
+            <img src="../image/tutorial/map/download_02.png" data-lity="">
+            <p data-localize="tutorialBasic-mDr-op-p-2">Mapのデータがダウンロードできます.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-map_download" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-map_download" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 id="tutorial_basic_map_archive" data-localize="tutorialBasic-mA-h2">Mapをアーカイブする</h2>
+<p data-localize="tutorialBasic-mA-p-1">RRS-OACISにアップロードしたMapをアーカイブする方法を説明します. </p>
+<p data-localize="tutorialBasic-mA-p-2">アーカイブされたMapはシミュレーションの選択画面などで表示されなくなります. </p>
+
+<h3 data-localize="tutorialBasic-mA-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-mA-move-p-1">
+    ブラウザで
+</p>
+<pre data-localize="tutorialBasic-mA-move-pre">
+http://localhost:3080/map/(mapのユニークID)
+</pre>
+<p data-localize="tutorialBasic-mA-move-p-2">
+    にアクセスします.
+</p>
+
+<p data-localize="tutorialBasic-mA-move-p-3">Mapの画面からLinkで移動できます.</p>
+<img src="../image/tutorial/map/download_m.png" data-lity="">
+
+<h3 data-localize="tutorialBasic-mA-op-h3">操作</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="archive_map">
+        <div>
+            <h5 data-localize="tutorialBasic-mA-op-h5-1">ステップ1</h5>
+            <img src="../image/tutorial/map/archive_01.png" data-lity="">
+            <p data-localize="tutorialBasic-mA-op-p-1">「Archive」のボタンを押します.</p>
+        </div>
+
+        <div>
+            <h5 data-localize="tutorialBasic-mA-op-h5-2">ステップ2</h5>
+            <img src="../image/tutorial/map/archive_02.png" data-lity="">
+            <p data-localize="tutorialBasic-mA-op-p-2">上の画像のようにArchivedの項目がTrueになっていればアーカイブ成功です.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-map_archive" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-map_archive" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 data-localize="tutorialBasic-mAL-op-h2">アーカイブしたMapを表示する</h2>
+<p data-localize="tutorialBasic-mAL-op-p-1">アーカイブしたMapの表示方法を説明します. </p>
+
+<h3 data-localize="tutorialBasic-mAL-op-move-h3">操作画面に移動</h3>
+<p data-localize="tutorialBasic-mAL-op-move-p-1">
+    ブラウザで
+</p>
+<pre>
+http://localhost:3080/maps_archived
+</pre>
+<p data-localize="tutorialBasic-mAL-op-move-p-2">
+    にアクセスします.
+</p>
+
+<img src="../image/tutorial/map/archive_list.png" data-lity="">
+
+<p data-localize="tutorialBasic-mAL-op-move-p-3">上の画像のようにアーカイブされたMapのデータがリストで表示されます. </p>
+
+<!-- ▲▲▲▲▲▲ Map ▲▲▲▲▲▲ -->
+
+<hr class="hr-success">
+
+<!-- ▼▼▼▼▼▼ Cluster ▼▼▼▼▼▼ -->
+
+<h2 id="add_cluster" data-localize="tutorialBasic-cAdd-h2">クラスターを追加</h2>
+
+<p data-localize="tutorialBasic-cAdd-p-1">シミュレーションで使用するクラスターを増やす方法を説明します．</p>
+
+<p data-localize="tutorialBasic-cAdd-p-2">
+    OSはUbuntuを想定して説明します．(macOSでも同様の操作で実行できることを確認しました．)
+</p>
+<h3 data-localize="tutorialBasic-cAdd-me-h3">必須環境</h3>
+<ul>
+    <li data-localize="tutorialBasic-cAdd-me-li-1">Ubuntu 16.04.3 LTS</li>
+    <li data-localize="tutorialBasic-cAdd-me-li-2">Oracle JDK (checked 1.8.0_40)</li>
+    <li data-localize="tutorialBasic-cAdd-me-li-3">OpenSSH</li>
+    <li data-localize="tutorialBasic-cAdd-me-li-4">パスワードの設定されたUbuntuのローカルアカウント</li>
+</ul>
+
+<h3 data-localize="tutorialBasic-cAdd-move-h3">設定画面に移動</h3>
+
+<p data-localize="tutorialBasic-cAdd-move-p-1">ブラウザで</p>
+<pre>
+    http://localhost:3080/settings-clusters
+</pre>
+<p data-localize="tutorialBasic-cAdd-move-p-2">にアクセスします.</p>
+
+<img src="../image/install/default_cluster.png" data-lity="">
+
+<h3 data-localize="tutorialBasic-cAdd-setting-h3">クラスターの設定</h3>
+
+<div style="margin-bottom: 16px;">
+    <div class="setup_host">
+        <div>
+            <h5 data-localize="tutorialBasic-cAdd-setting-h5-1">ステップ1</h5>
+            <img src="../image/install/cluster_init_01.png" data-lity="">
+            <p data-localize="tutorialBasic-cAdd-setting-p-1">クラスターにするPCのユーザー名とIPアドレスを入力します．形式は「ユーザー名@IPアドレス」になります．</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-cAdd-setting-h5-2">ステップ2</h5>
+            <img src="../image/install/cluster_init_02.png" data-lity="">
+            <p data-localize="tutorialBasic-cAdd-setting-p-2-1">シミュレーションのログファイルの保存形式を設定します．クラスターのOSが対応している形式を選択します．</p>
+            <p data-localize="tutorialBasic-cAdd-setting-p-2-2">※Ubuntuの場合はデフォルトのgzip形式で問題ありません．</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-cAdd-setting-h5-3">ステップ3</h5>
+            <img src="../image/install/cluster_init_03.png" data-lity="">
+            <p data-localize="tutorialBasic-cAdd-setting-p-3-1">クラスターのパスワードを入力します．</p>
+            <p data-localize="tutorialBasic-cAdd-setting-p-3-2">※Ubuntuのアカウントのパスワードです．</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-cAdd-setting-h5-4">ステップ4</h5>
+            <img src="../image/install/cluster_init_04.png" data-lity="">
+            <p data-localize="tutorialBasic-cAdd-setting-p-4">Addボタンを押して追加します．</p>
+        </div>
+        <div>
+            <h5 data-localize="tutorialBasic-cAdd-setting-h5-5">ステップ5</h5>
+            <img src="../image/install/cluster_init_success.png" data-lity="">
+            <p data-localize="tutorialBasic-cAdd-setting-p-5">上のように表示されたら設定完了です．</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <button id="prevArrow-setup_host" class="btn btn-primary" style="margin: 0px 8px;">Prev</button>
+        <button id="nextArrow-setup_host" class="btn btn-primary" style="margin: 0px 8px;">Next</button>
+    </div>
+
+</div>
+
+<div class="panel panel-info">
+    <span class="label label-info">Tips</span>
+    <div class="panel-body" data-localize="tutorialBasic-cAdd-setting-tips">
+
+        一つのクラスターを1~3台だけで構築する事も可能です．4台用意する必要はありません．
+
+    </div>
+</div>
+
+<!-- ▲▲▲▲▲▲ Cluster ▲▲▲▲▲▲ -->
+
+<div class="pull-right">
+    <a class="btn btn-default" href="?page=tutorial" data-localize="tutorialBasic-btn-t">チュートリアル一覧へ</a>
+    <a class="btn btn-info" href="?page=tutorial/index.html#run" data-localize="tutorialBasic-btn-r">研究用チュートリアルへ</a>
+    <a class="btn btn-info" href="?page=tutorial/index.html#competition" data-localize="tutorialBasic-btn-c">大会用チュートリアルへ</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $('.upload_agent').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-Agent"),
+            nextArrow : $("#nextArrow-Agent")
+
+        });
+
+        $('.upload_map').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-Map"),
+            nextArrow : $("#nextArrow-Map")
+
+        });
+
+        $('.download_agent').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-download"),
+            nextArrow : $("#nextArrow-download")
+
+        });
+
+        $('.archive_agent').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-archive"),
+            nextArrow : $("#nextArrow-archive")
+
+        });
+
+        $('.download_map').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-map_download"),
+            nextArrow : $("#nextArrow-map_download")
+
+        });
+
+        $('.archive_map').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-map_archive"),
+            nextArrow : $("#nextArrow-map_archive")
+
+        });
+
+        $('.setup_host').slick({
+            dots: true,
+            infinite: false,
+            //appendArrows: $("#arrow")
+            prevArrow : $("#prevArrow-setup_host"),
+            nextArrow : $("#nextArrow-setup_host")
+
+        });
+
+        $("#agent_tree").fancytree();
+
+        $("#map_tree").fancytree();
+
+        /*
+        var tree = $("#agent_tree").fancytree('getTree');
+
+        var node = tree.getNodeByKey("node_4.1");
+        //node.extraClasses = "custom1";
+        //node.renderTitle();
+        node = tree.getNodeByKey("node_4.2");
+        node.icon = "customDoc1.gif";
+        node.renderTitle();
+
+        */
+
+    });
+
+
+</script>
